@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Background Color</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            animation: bgcolor infinite 20s;
+        }
+        h1 {
+            margin: auto;
+            padding: 0;
+            font-family: Arial;
+            font-size: 6em;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            text-transform: uppercase;
+        }
+        @keyframes bgcolor {
+              0%{
+                  background: #e74c3c;
+              }
+             20%{
+                 background: #2980b9;
+             }
+             40%{
+                 background: #f1c40f;
+             }
+             60%{
+                 background: #8e44ad;
+             }
+             80%{
+                 background: #34495e;
+             }
+            100%{
+                background: #e74c3c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Changing Background Color</h1>
+</body>
+</html>

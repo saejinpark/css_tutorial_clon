@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slide on Hover</title>
+    <style>
+        body {
+            background: #1c363e;
+            margin: 0;
+            padding: 0;
+        }
+        .imageBox {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #000;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, .5);
+            overflow: hidden;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .imageBox img {
+            height: 100%;
+            transition: .5s;
+        }
+        .imageBox .textBox {
+            position: absolute;
+            bottom: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #4a4a4a;
+            box-sizing: border-box;
+            padding: 15px 10px;
+            font-family: 'Webdings';
+            font-size: 14px;
+            transition: .5s;
+        }
+        .imageBox .textBox p {
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        .imageBox:hover .textBox {
+            bottom: -65%;
+        }
+        .imageBox:hover img {
+            transform: translateY(-35%);
+        }
+    </style>
+</head>
+<body>
+    <div class="imageBox">
+        <img src="./image/sample.jpg" alt="image">
+        <div class="textBox">
+            <p>0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+        </div>
+    </div>
+</body>
+</html>
