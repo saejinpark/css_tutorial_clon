@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Effect</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        body {
+            background: #292929;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-family: arial;
+            height: 100vh;
+        }
+        .cardBox {
+            perspective: 500px;
+            margin: 15px;
+        }
+        .card {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            transform-style: preserve-3d;
+            transition: .5s ease;
+            box-shadow: 0 30px 30px rgba(0, 0, 0, .5);
+        }
+        .facebook {
+            background: #3b5998;
+        }
+        .twitter {
+            background: #00aced;
+        }
+        .googlePlus {
+            background-color: #dd4b39;
+        }
+        .card-front, .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            color: #fff;
+            backface-visibility: hidden;
+        }
+        .card-front {
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-back {
+            display: flex;
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+        }
+        .cardBox:hover .card {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cardBox">
+        <div class="card facebook">
+            <div class="card-front"><i class="fab fa-facebook-f"></i></div>
+            <div class="card-back facebook">Facebook</div>
+        </div>
+    </div>
+    <div class="cardBox">
+        <div class="card twitter">
+            <div class="card-front"><i class="fab fa-twitter"></i></div>
+            <div class="card-back">Twitter</div>
+        </div>
+    </div>
+    <div class="cardBox">
+        <div class="card googlePlus">
+            <div class="card-front"><i class="fab fa-google-plus-g"></i></div>
+            <div class="card-back">Google+</div>
+        </div>
+    </div>
+</body>
+</html>
