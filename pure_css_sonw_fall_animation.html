@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Css Snow Fall Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            background-size: cover;
+            width: 100%;
+            height: 650px;
+            overflow: hidden;
+        }
+        .snow1 {
+            background: url(./image/sample.jpg);
+            background-repeat: repeat;
+            width: 100%;
+            height: 650px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: animateOne 10s infinite alternate linear;
+            opacity: .2;
+        }
+        @keyframes animateOne {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: 100px 650px;
+            }
+        }
+        .snow2 {
+            background: url(./image/sample.jpg);
+            background-repeat: repeat;
+            width: 100%;
+            height: 650px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: animateTwo 10s infinite alternate linear;
+            opacity: .5;
+        }
+        @keyframes animateTwo {
+            0% {
+                background-position: 0px -100px;
+            }
+            100% {
+                background-position: 0px 650px;
+            }
+        }
+        .snow3 {
+            background: url(./image/sample.jpg);
+            background-repeat: repeat;
+            width: 100%;
+            height: 650px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: animateThree 10s infinite alternate linear;
+            opacity: .2;
+        }
+        @keyframes animateThree {
+            0% {
+                background-position: 0px 100px;
+            }
+            100% {
+                background-position: 300px 650px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="snow1"></div>
+        <div class="snow2"></div>
+        <div class="snow3"></div>
+    </section>
+</body>
+</html>
