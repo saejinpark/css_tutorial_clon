@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bounding Ball</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .ball {
+        width: 50px;
+        border-top: 25px solid #f00;
+        border-bottom: 25px solid #000;
+        border-radius: 50%;
+        animation: bounce 1s infinite linear;
+      }
+      .shadow {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 50px;
+        height: 10px;
+        background: #262626;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: shadow 1s infinite linear;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-200px) rotate(180deg);
+        }
+        100% {
+          transform: translateY(0) rotate(360deg);
+        }
+      }
+      @keyframes shadow {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.4);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="ball"></div>
+      <div class="shadow"></div>
+    </div>
+  </body>
+</html>
