@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatid Text background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #4e004e;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+            font-family: "Arial Black";
+            font-size: 11em;
+            line-height: 1em;
+            text-transform: uppercase;
+            background: url(./image/sample.jpg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animate 10s infinite linear;
+        }
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Muhammad Irshad</h1>
+</body>
+</html>
