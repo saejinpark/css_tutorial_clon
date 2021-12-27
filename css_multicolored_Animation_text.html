@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Multi Color Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff;
+        }
+        h1 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: arial;
+            font-size: 10em;
+            text-transform: uppercase;
+            color: #b0e9ff;
+            text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+        }
+        h1::before {
+            content: 'water';
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 25%;
+            color: #fff;
+            text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+            overflow: hidden;
+            animation: animate 6s infinite linear;
+        }
+        @keyframes animate {
+            0% {
+                height: 25%;
+            }
+            25% {
+                height: 50%;
+            }
+            50% {
+                height: 75%;
+            }
+            75% {
+                height: 50%;
+            }
+            100% {
+                height: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Water</h1>
+</body>
+</html>
