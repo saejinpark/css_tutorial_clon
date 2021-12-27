@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Text</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #93beff;
+        overflow: hidden;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 300px;
+        font-family: arial;
+        font-size: 10em;
+        text-transform: uppercase;
+        line-height: 1em;
+        color: #fff;
+        text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+          0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
+        animation: animate 5s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(5deg);
+        }
+        25% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+        75% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(5deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Floating<br />TEXT</h1>
+  </body>
+</html>
