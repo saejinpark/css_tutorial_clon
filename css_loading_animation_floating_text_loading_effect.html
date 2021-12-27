@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+        }
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+            float: left;
+            background: #ff85e4;
+            padding: 15px 20px;
+            font-size: 20px;
+            margin: 10px;
+            color: #fff;
+            animation: animate 1s infinite alternate;
+            -webkit-perspective: 500px;
+        }
+        ul li:nth-child(1) {
+            animation-delay: .1s;
+        }
+        ul li:nth-child(2) {
+            animation-delay: .2s;
+        }
+        ul li:nth-child(3) {
+            animation-delay: .3s;
+        }
+        ul li:nth-child(4) {
+            animation-delay: .4s;
+        }
+        ul li:nth-child(5) {
+            animation-delay: .5s;
+        }
+        ul li:nth-child(6) {
+            animation-delay: .6s;
+        }
+        ul li:nth-child(7) {
+            animation-delay: .7s;
+        }
+        @keyframes animate {
+            from {
+                transform: scale(1) translateY(0) rotateX(0deg);
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            to {
+                transform: scale(1.3) translateY(-25px) rotateX(25deg);
+                box-shadow: 0 20px 5px rgba(0, 0, 0, .1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>L</li>
+        <li>O</li>
+        <li>A</li>
+        <li>D</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+    </ul>
+</body>
+</html>
