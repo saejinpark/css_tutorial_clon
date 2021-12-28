@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change letter Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #5245d8;
+        }
+        h1 {
+            margin: 250px 0 0 400px;
+            padding: 0;
+            font-family: arial;
+            color: #fff;
+            font-size: 5em;
+            text-shadow: 0 2px rgba(0, 0, 0, .5);
+        }
+        h1::after {
+            content: 'HTML';
+            animation: animate 8s infinite;
+        }
+        @keyframes animate {
+            0% {
+                content: 'HTML';
+            }
+            25% {
+                content: 'CSS';
+            }
+            50% {
+                content: 'jQuery';
+            }
+            75% {
+                content: 'Photoshop';
+            }
+            100% {
+                content: 'Bootstrap';
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I love <span></span></h1>
+</body>
+</html>
