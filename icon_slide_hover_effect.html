@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Slide Hover Effect</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+        background: #262626;
+      }
+      ul {
+        margin: 300px auto;
+        width: 50%;
+      }
+      ul li {
+        list-style: none;
+        float: left;
+        text-align: center;
+        width: 33.33%;
+      }
+      ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      ul li a .fas {
+        font-size: 4em;
+        transition: 0.5s;
+      }
+      ul li a p {
+        opacity: 0;
+        transition: 0.5s;
+        transform: translateY(20px);
+      }
+      ul li:hover .fas {
+        transform: translateY(-20px) scale(0.8);
+      }
+      ul li:hover a p {
+        opacity: 1;
+        transform: translateY(-20px) scale(0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="icon">
+          <a href="#">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>map</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <a href="#">
+            <i class="fas fa-envelope"></i>
+            <p>envelope</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <a href="#">
+            <i class="fas fa-phone-alt"></i>
+            <p>phone</p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
